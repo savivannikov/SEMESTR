@@ -1,4 +1,5 @@
-* {
+    /* Общие стили */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -61,93 +62,75 @@ body {
 
 /* Основная часть */
 .content {
-    padding-top: 80px;
+    padding-top: 80px; /* Учитываем высоту фиксированной шапки */
 }
 
-.main-section .container {
+.experience-section .container {
     display: flex;
-    gap: 30px;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.left-block {
-    flex-grow: 1;
+.education-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.left-block span {
-    display: block;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.card h3 {
     font-size: 18px;
-    color: #666;
     margin-bottom: 10px;
 }
 
-.left-block p {
-    font-size: 22px;
-    margin-bottom: 15px;
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-.left-block h1 {
-    font-size: 36px;
-    margin-bottom: 25px;
+.card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
-.buttons {
-    display: flex;
-    gap: 15px;
+.card li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.button {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-.right-block img {
-    width: 300px;
-    height: 400px;
-    object-fit: cover;
-    margin-left: -50px;
-}
-
-
-.about-section {
-    background-color: #fafafa;
-    padding: 40px 0;
-}
-
-.about-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.social-icons {
+.skills-section .container {
     display: flex;
     gap: 20px;
 }
 
-.social-icons a {
+.quality-icons, .language-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.quality-icons i, .language-icons i {
     font-size: 24px;
     color: #007bff;
     transition: all 0.3s ease;
 }
 
-.social-icons a:hover {
+.quality-icons i:hover, .language-icons i:hover {
     color: #0056b3;
 }
 
-
+/* Подвал */
 .footer {
     background-color: #222;
     color: #fff;
